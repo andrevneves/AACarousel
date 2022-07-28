@@ -12,6 +12,7 @@ public protocol AACarouselDelegate {
    func didSelectCarouselView(_ view:AACarousel, _ index:Int)
    func callBackFirstDisplayView(_ imageView:UIImageView, _ url:[String], _ index:Int)
    func downloadImages(_ url:String, _ index:Int)
+   func didScroll(_ view:AACarousel, _ index:Int)
 }
 
 let needDownload = "http"
@@ -395,6 +396,7 @@ public class AACarousel: UIView,UIScrollViewDelegate {
         }
         
         scrollView.contentOffset = CGPoint.init(x: frame.size.width * 2, y: 0)
+        delegate?.didScroll(self, currentIndex)
     }
     
     //MARK:- set auto scroll
