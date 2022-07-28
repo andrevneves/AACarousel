@@ -118,7 +118,7 @@ public class AACarousel: UIView,UIScrollViewDelegate {
         describedLabel.font = UIFont.boldSystemFont(ofSize: 18)
         describedLabel.numberOfLines = 2
         describedLabel.textColor = UIColor.white
-        // layerView.addSubview(describedLabel)
+        layerView.addSubview(describedLabel)
     }
     
     fileprivate func initWithPageControl() {
@@ -220,7 +220,7 @@ public class AACarousel: UIView,UIScrollViewDelegate {
     
     fileprivate func setLabelFrame() {
         
-        // describedLabel.frame = CGRect.init(x: scrollView.frame.size.width * 2 + 10 , y: layerView.frame.size.height - 75, width: scrollView.frame.size.width - 20, height: 70)
+        describedLabel.frame = CGRect.init(x: scrollView.frame.size.width * 2 + 10 , y: layerView.frame.size.height - 75, width: scrollView.frame.size.width - 20, height: 70)
     
     }
     
